@@ -1,139 +1,245 @@
+
 <!DOCTYPE html>
+
 <html lang="en">
+
 <head>
+
   <meta charset="UTF-8">
+
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
   <meta name="description" content="Accessible Enterprise Dashboard">
+
   <title>Accessible Enterprise Dashboard</title>
+
   <link rel="stylesheet" href="css/style.css">
+
 </head>
 
 <body>
+
   <header class="site-header">
+
     <a class="logo" href="index.html">Enterprise Dashboard</a>
 
     <nav aria-label="Primary navigation">
+
       <ul class="nav-list">
+
         <li><a href="index.html" aria-current="page">Dashboard</a></li>
+
         <li><a href="about.html">About</a></li>
+
       </ul>
+
     </nav>
+
   </header>
 
   <div class="layout">
+
     <aside class="sidebar" aria-label="Sidebar navigation">
+
       <h2>Menu</h2>
+
       <nav aria-label="Dashboard navigation">
+
         <ul>
+
           <li><a href="#overview">Overview</a></li>
+
           <li><a href="#users">Users</a></li>
+
           <li><a href="#reports">Reports</a></li>
+
         </ul>
+
       </nav>
+
     </aside>
 
     <main id="main-content">
+
       <section id="overview" aria-labelledby="overview-title">
+
         <h1 id="overview-title">Dashboard Overview</h1>
+
         <p>Monitor enterprise activities and user information.</p>
 
         <article class="card">
+
           <h2>Search Users</h2>
 
           <form action="#" method="get">
+
             <fieldset>
+
               <legend>User Search</legend>
 
               <div class="form-group">
+
                 <label for="search">Search by name</label>
+
                 <input
+
                   type="search"
+
                   id="search"
+
                   name="search"
+
                   aria-label="Search users by name"
+
                   placeholder="Enter user name"
+
                 >
+
               </div>
 
               <div class="form-group">
+
                 <label for="email">Email address</label>
+
                 <input
+
                   type="email"
+
                   id="email"
+
                   name="email"
+
                   autocomplete="email"
+
                   required
+
                   aria-required="true"
+
                 >
+
               </div>
 
               <button type="submit">Search</button>
+
             </fieldset>
+
           </form>
+
         </article>
+
       </section>
 
       <section id="users" aria-labelledby="users-title">
+
         <h2 id="users-title">User Data</h2>
 
         <div class="table-container">
+
           <table>
+
             <caption>Registered enterprise users</caption>
+
             <thead>
+
               <tr>
+
                 <th scope="col">Name</th>
+
                 <th scope="col">Role</th>
+
                 <th scope="col">Status</th>
+
               </tr>
+
             </thead>
+
             <tbody>
+
               <tr>
+
                 <td>Om Laware</td>
+
                 <td>Developer</td>
+
                 <td>Active</td>
+
               </tr>
+
               <tr>
+
                 <td>Rahul Patil</td>
+
                 <td>Designer</td>
+
                 <td>Active</td>
+
               </tr>
+
               <tr>
+
                 <td>Priya Sharma</td>
+
                 <td>Manager</td>
+
                 <td>Inactive</td>
+
               </tr>
+
             </tbody>
+
           </table>
+
         </div>
+
       </section>
 
       <section id="reports" aria-labelledby="reports-title">
+
         <h2 id="reports-title">Reports</h2>
 
         <article class="card">
+
           <h3>Monthly Report</h3>
+
           <p>View the latest enterprise activity report.</p>
 
           <button type="button" id="openModal" aria-haspopup="dialog">
+
             Open Report
+
           </button>
+
         </article>
+
       </section>
 
       <dialog id="reportModal" aria-labelledby="modal-title">
+
         <article>
+
           <h2 id="modal-title">Monthly Report</h2>
+
           <p>The monthly enterprise report is ready for review.</p>
+
           <button type="button" id="closeModal">Close</button>
+
         </article>
+
       </dialog>
+
     </main>
+
   </div>
 
   <footer class="site-footer">
+
     <p>&copy; 2026 Enterprise Dashboard. Built with semantic HTML5.</p>
+
   </footer>
 
   <script src="js/script.js"></script>
+
 </body>
+
 </html>
+
